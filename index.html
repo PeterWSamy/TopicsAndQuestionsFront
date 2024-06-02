@@ -5,29 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Search</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+            margin: 20px 0;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
         table {
             width: 50%;
             border-collapse: collapse;
             margin: 20px 0;
-            font-size: 18px;
-            text-align: left;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         th, td {
             padding: 12px;
             border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
-    <h1>Search API</h1>
+    <h1>Search Questions based on topic</h1>
     <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Enter search term">
+        <input type="text" id="searchInput" placeholder="Enter topic name">
         <button type="submit">Search</button>
     </form>
     <table id="resultsTable">
         <thead>
             <tr>
-                <th>Numbers</th>
+                <th>Question Numbers</th>
             </tr>
         </thead>
         <tbody>
